@@ -82,7 +82,7 @@ function setAlarm () {
 
     let time= `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
     if (time.includes('Hour') || time.includes('Minutes') || time.includes('AM/PM')) {
-        alert("Don't be stupid, set a valid time to set an alarm, Abi you no go schoo?")
+        alert("I know you don't have sense and you will do this kind tin, set a valid time to set an alarm and leave here for me?")
     }
 
     isAlarmSet= true
