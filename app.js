@@ -12,6 +12,31 @@ ringTone = new Audio('./Recording.m4a');
 
 // console.log(selectMenu);
 
+
+// ANALOGUE SETT UP
+function setClock() {
+    // Get the current time
+	let currentTime = new Date();
+	let hours = currentTime.getHours();
+	let minutes = currentTime.getMinutes();
+	let seconds = currentTime.getSeconds();
+    
+	// Calculate the degrees for each hand
+	let hourDegrees = (hours / 12) * 360 + (minutes / 60) * 30 + 90;
+	let minuteDegrees = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
+	let secondDegrees = (seconds / 60) * 360 + 90;
+
+	// Set the rotation of each hand
+	document.querySelector(".hour").style.transform = "rotate(" + hourDegrees + "deg)";
+	document.querySelector(".minute").style.transform = "rotate(" + minuteDegrees + "deg)";
+	document.querySelector(".second").style.transform = "rotate(" + secondDegrees + "deg)";
+}
+
+// Call the function every second
+setInterval(setClock, 1000);
+// ANALOGUE SET UP 
+
+
 // FOR LOOP SETUP TO GET HOURS
 
 // for (let i = 1; i < 13; i++) {

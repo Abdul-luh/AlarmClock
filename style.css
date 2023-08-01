@@ -1,65 +1,143 @@
 /* Import google font - poppins  */
-@import url('http://fonts.googleapis.com/css2?family=Poppins:weight@400;500;600;700;800;900');
-*{
-    margin: 0;padding: 0;box-sizing: border-box;font-family: 'Poppins', sans-serif;
+@import url("http://fonts.googleapis.com/css2?family=Poppins:weight@400;500;600;700;800;900");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
-body, .wrapper, .content{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body,
+.wrapper,
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-body{
-    min-height: 100vh;
-    background-color: #222;
+body {
+	min-height: 100vh;
+	background-color: #222;
 }
-.wrapper{
-    background-color: #fefefe;
-    width: 440px;
-    flex-direction: column;
-    border-radius: 10px;
-    
-    padding: 30px 30px 38px;
+.wrapper {
+	background-color: #fefefe;
+	width: 440px;
+	flex-direction: column;
+	border-radius: 10px;
+
+	padding: 30px 30px 38px;
 }
-.wrapper img{
-    max-width: 50%;
+
+.clock {
+	width: 160px;
+	height: 160px;
+	border: 8px solid black;
+	border-radius: 50%;
+	position: relative;
+	padding: 20px;
+	margin: 20px auto;
 }
-.wrapper h1{
-    font-size: 2rem;
-    font-weight: 500;
-    margin: 30px 0;
+
+.hour {
+	width: 6px;
+	height: 40px;
+	background: black;
+	position: absolute;
+	top: 32px;
+	left: 68px;
+	transform-origin: bottom center;
 }
-.wrapper .content{
-    width: 100%;
-    justify-content: space-around;
+
+.minute {
+	width: 4px;
+	height: 60px;
+	background: black;
+	position: absolute;
+	top: 14px;
+	left: 68px;
+	transform-origin: bottom center;
+}
+
+.second {
+	width: 2px;
+	height: 60px;
+	background: red;
+	position: absolute;
+	top: 18px;
+	left: 68px;
+	transform-origin: bottom center;
+}
+
+.dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: black;
+	position: absolute;
+	top: 70px;
+	left: 64px;
+}
+p {
+	position: absolute;
+	font-weight: 900;
+	font-size: 24px;
+}
+.twelve {
+	top: 0;
+	right: 42%;
+}
+.three {
+	top: 40%;
+	right: 5%;
+}
+.six {
+	bottom: 0;
+	right: 45%;
+}
+.nine {
+	top: 40%;
+	right: 87%;
+}
+
+.wrapper img {
+	max-width: 50%;
+}
+.wrapper h1 {
+	font-size: 2rem;
+	font-weight: 500;
+	margin: 30px 0;
+}
+.wrapper .content {
+	width: 100%;
+	justify-content: space-around;
 }
 
 .content .disabled {
-    opacity: 0.2;
-    pointer-events: none;
+	opacity: 0.2;
+	pointer-events: none;
 }
-.column{
-    border-radius: 5px;
-    border: 1px solid #222;
-    width: calc(100% / 3 - 5px);
-    padding: 0 10px;
+.column {
+	border-radius: 5px;
+	border: 1px solid #222;
+	width: calc(100% / 3 - 5px);
+	padding: 0 10px;
 }
-select, button{
-    outline: none;
-    border: none;
-    height: 50px;
-    width: 100%;
-    font-size: 18px;
+select,
+button {
+	outline: none;
+	border: none;
+	height: 50px;
+	width: 100%;
+	font-size: 18px;
 }
-.wrapper button{
-    margin-top: 20px;
-    font-size: 20px;
-    padding: 15px 0;
-    border-radius: 5px;
-    background-color: #444;
-    color: #fefefe;
-    cursor: pointer;
-    transition: 0.5s;
+.wrapper button {
+	margin-top: 20px;
+	font-size: 20px;
+	padding: 15px 0;
+	border-radius: 5px;
+	background-color: #444;
+	color: #fefefe;
+	cursor: pointer;
+	transition: 0.5s;
 }
-.wrapper button:hover{
-    background-color: #666;
+.wrapper button:hover {
+	background-color: #666;
 }
